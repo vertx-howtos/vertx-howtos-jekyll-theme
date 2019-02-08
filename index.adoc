@@ -1,6 +1,5 @@
 = This is a test
 :page-github: foo/bar
-:page-layout: page
 
 This is a test to develop the theme.
 
