@@ -1,0 +1,61 @@
+---
+---
+
+// Fonts
+
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans");
+
+$font-size-base: 1.05rem;
+$font-family-sans-serif: "IBM Plex Sans", sans-serif;
+$font-family-monospace: "IBM Plex Mono", monospace;
+
+// My stuff
+
+@import "custom";
+
+$purple: #782b90;
+
+.bg-purple {
+    background-color: $purple;
+}
+
+@mixin purple-margin() {
+    border-left: solid 0.25em $purple;
+    padding: 0.5em;
+    padding-left: 1em;
+    background-color: $gray-100;
+    border-radius: 0.5em;
+}
+
+pre.highlight {
+    @include purple-margin();
+}
+
+.title {
+    color: $purple;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+.admonitionblock {
+    @include purple-margin();
+    margin-bottom: 1em;
+    div {
+        margin: 0;
+    }
+    td.icon {
+      vertical-align: top;
+      padding-right: 0.2em;
+      .title {
+        font-style: normal;
+        font-weight: bold;
+        text-transform: uppercase;
+        &:after {
+          content: ': ';
+        }
+      }
+    }
+  }
