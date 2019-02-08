@@ -1,7 +1,7 @@
 ---
 ---
 
-// Fonts
+// Fonts and definitions
 
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans");
 
@@ -9,11 +9,14 @@ $font-size-base: 1.05rem;
 $font-family-sans-serif: "IBM Plex Sans", sans-serif;
 $font-family-monospace: "IBM Plex Mono", monospace;
 
-// My stuff
+$purple: #782b90;
+$link-color: $purple;
+
+// Bootstrap
 
 @import "custom";
 
-$purple: #782b90;
+// My stuff
 
 .bg-purple {
     background-color: $purple;
@@ -25,6 +28,7 @@ $purple: #782b90;
     padding-left: 1em;
     background-color: $gray-100;
     border-radius: 0.5em;
+    box-shadow: $box-shadow-sm;
 }
 
 pre.highlight {

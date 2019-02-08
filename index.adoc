@@ -6,6 +6,8 @@ This is a test to develop the theme.
 
 == A first section
 
+https://vertx.io[Vert.x, when simplicity meets simplicity.]
+
 Here is a list:
 
 - foo
