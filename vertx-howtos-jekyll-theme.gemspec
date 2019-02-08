@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "vertx-howtos-jekyll-theme"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["Julien Ponge"]
   spec.email         = ["julien.ponge@gmail.com"]
 
