@@ -18,12 +18,16 @@ $link-color: $purple;
 
 // My stuff
 
+code {
+  color: $purple;
+}
+
 .bg-purple {
     background-color: $purple;
 }
 
-@mixin purple-margin() {
-    border-left: solid 0.25em $purple;
+@mixin color-margin($color) {
+    border-left: solid 0.25em $color;
     padding: 0.5em;
     padding-left: 1em;
     background-color: $gray-100;
@@ -31,8 +35,8 @@ $link-color: $purple;
     box-shadow: $box-shadow-sm;
 }
 
-pre.highlight {
-    @include purple-margin();
+pre {
+    @include color-margin($purple);
 }
 
 .title {
@@ -45,21 +49,26 @@ pre.highlight {
 }
 
 .admonitionblock {
-    @include purple-margin();
+    @include color-margin($purple);
     margin-bottom: 1em;
     div {
         margin: 0;
     }
     td.icon {
       vertical-align: top;
-      padding-right: 0.2em;
+      padding-right: 0.5em;
       .title {
         font-style: normal;
         font-weight: bold;
         text-transform: uppercase;
         &:after {
-          content: ': ';
+          content: ' / ';
         }
+      }
+    }
+    td.content {
+      p {
+        margin: 0;
       }
     }
   }

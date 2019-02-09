@@ -17,7 +17,7 @@ Not bad, not bad...
 
 == Now, some code
 
-Here is a _classic_ hello world in Java:
+Here is a _classic_ hello world in Java, in the form of a `Hello` class:
 
 [source,java]
 .Hello.java
@@ -30,6 +30,33 @@ public class Hello {
 ----
 <1> Prints `Hello!`.
 <2> Well... nothing.
+
+And now, here is a pre-formatted text block:
+
+----
+$ ls -lsa
+total 496
+  0 drwxr-xr-x  18 jponge  staff     576 Feb  8 19:44 .
+  0 drwxr-xr-x   6 jponge  staff     192 Feb  6 15:50 ..
+  0 drwxr-xr-x  14 jponge  staff     448 Feb  9 16:29 .git
+  8 -rw-r--r--   1 jponge  staff      55 Feb  8 08:40 .gitignore
+  0 drwxr-xr-x  17 jponge  staff     544 Feb  7 14:07 .sass-cache
+  8 -rw-r--r--   1 jponge  staff     166 Feb  7 16:13 Gemfile
+  8 -rw-r--r--   1 jponge  staff    1921 Feb  7 16:10 Gemfile.lock
+  8 -rw-r--r--   1 jponge  staff    1079 Feb  6 15:47 LICENSE.txt
+  8 -rw-r--r--   1 jponge  staff    2130 Feb  6 15:47 README.md
+  8 -rw-r--r--   1 jponge  staff      83 Feb  7 21:24 _config.yml
+  0 drwxr-xr-x   2 jponge  staff      64 Feb  6 15:47 _includes
+  0 drwxr-xr-x   3 jponge  staff      96 Feb  8 14:51 _layouts
+  0 drwxr-xr-x   5 jponge  staff     160 Feb  7 14:06 _sass
+  0 drwxr-xr-x   9 jponge  staff     288 Feb  8 14:51 _site
+  0 drwxr-xr-x   5 jponge  staff     160 Feb  7 16:22 assets
+  8 -rw-r--r--   1 jponge  staff     641 Feb  8 14:51 index.adoc
+432 -rw-r--r--@  1 jponge  staff  217370 Feb  7 22:14 pic.png
+  8 -rw-r--r--   1 jponge  staff     698 Feb  9 16:28 vertx-howtos-jekyll-theme.gemspec
+----
+
+It should have been rendered like a code block.
 
 [TIP]
 This is a tip, somehow very useful.
