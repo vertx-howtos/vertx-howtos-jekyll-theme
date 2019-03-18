@@ -61,7 +61,7 @@ It should have been rendered like a code block.
 [TIP]
 This is a tip, somehow very useful.
 
-== Last but not least
+== Pictures
 
 Here is a picture:
 
@@ -71,3 +71,13 @@ image::pic.png[width=50%]
 ====
 Do not do this at home.
 ====
+
+== Collapsing blocks
+
+.`Main.kt`
+[source,kotlin,role="collapsed"]
+----
+fun main() {
+  println("Yo!")
+}
+----
