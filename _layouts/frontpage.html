@@ -1,0 +1,32 @@
+{% include header.html %}
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-purple mb-4 shadow-sm">
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/vertx-square.svg" alt="Vert.x" width="40" height="40">
+        &nbsp; Eclipse Vert.x how-to
+    </a>
+</nav>
+
+<div class="container">
+    <div class="row">
+        {% for howto in site.data.howtos %}
+        <div class="card col-12">
+            <div class="card-body">
+                <h5 class="card-title"><a href="/{{ howto.repo }}/">{{ howto.repo }}</a></h5>
+                <p class="card-text">
+                        {% for tag in howto.tags %}
+                            <span class="badge badge-pill badge-light">{{ tag }}</span>
+                        {% endfor %}
+                    </p>
+                <p class="card-text">{{ howto.description }}</p>
+                <a href="/{{ howto.repo }}/" class="btn btn-light"><i class="fa fa-glasses"></i> Read the how-to</a>
+                <a href="https://github.com/vertx-howtos/{{ howto.repo }}" class="btn btn-light"><i
+                        class="fab fa-github"></i> GitHub repository</a>                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% include footer.html %}
