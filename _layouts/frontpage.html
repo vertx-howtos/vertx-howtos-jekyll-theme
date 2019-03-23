@@ -8,25 +8,68 @@
 </nav>
 
 <div class="container">
+    <div class="row mb-3">
+        <input type="text" class="form-control" id="searchBox" placeholder="search by tags">
+    </div>
+</div>
+
+<div class="container">
     <div class="row">
         {% for howto in site.data.howtos %}
-        <div class="card col-12">
+        <div class="card col-12 mb-3" data-tags="{% for tag in howto.tags %}{{ tag }} {% endfor %}">
             <div class="card-body">
                 <h5 class="card-title"><a href="/{{ howto.repo }}/">{{ howto.repo }}</a></h5>
                 <p class="card-text">
-                        {% for tag in howto.tags %}
-                            <span class="badge badge-pill badge-light">{{ tag }}</span>
-                        {% endfor %}
-                    </p>
+                    {% for tag in howto.tags %}
+                    <span class="badge badge-pill badge-light">{{ tag }}</span>
+                    {% endfor %}
+                </p>
                 <p class="card-text">{{ howto.description }}</p>
                 <a href="/{{ howto.repo }}/" class="btn btn-light"><i class="fa fa-glasses"></i> Read the how-to</a>
                 <a href="https://github.com/vertx-howtos/{{ howto.repo }}" class="btn btn-light"><i
-                        class="fab fa-github"></i> GitHub repository</a>                
+                        class="fab fa-github"></i> GitHub repository</a>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
 
+<script>
+    (function () {
+        function show(element) {
+            element.style.display = "block";
+        }
+        function hide(element) {
+            element.style.display = "none";
+        }
+        const cards = Array.from(document.getElementsByClassName("card"));
+        const searchBox = document.getElementById("searchBox");
+        searchBox.focus();
+        searchBox.addEventListener("input", function(event) {
+            cards.forEach(function(card) {
+                show(card);
+            });
+            const search = searchBox.value.trim();
+            if (search.length == 0) {
+                return;
+            }
+            const searchTags = search.split(" ");
+            cards.forEach(function(card) {             
+                const tags = card.dataset.tags.trim().split(" ");
+                let found = false;
+                for (let i = 0; (i < searchTags.length && !found); i++) {
+                    for (let j = 0; (j < tags.length && !found); j++) {
+                        found = tags[j].includes(searchTags[i]);
+                    }
+                }
+                if (found) {
+                    show(card);
+                } else {
+                    hide(card);
+                }
+            });
+        });
+    })();
+</script>
 
 {% include footer.html %}
