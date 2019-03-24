@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "vertx-howtos-jekyll-theme"
-  spec.version       = "0.3.1" # Bump before releasing!
+  spec.version       = "0.3.2" # Bump before releasing!
   spec.authors       = ["Julien Ponge"]
   spec.email         = ["julien.ponge@gmail.com"]
 
