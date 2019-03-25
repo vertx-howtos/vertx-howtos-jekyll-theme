@@ -49,7 +49,7 @@
             cards.forEach(function(card) {
                 show(card);
             });
-            const search = searchBox.value.trim();
+            const search = searchBox.value.trim().toLowerCase();
             if (search.length == 0) {
                 return;
             }
