@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "vertx-howtos-jekyll-theme"
-  spec.version       = "0.4.0" # Bump before releasing!
+  spec.version       = "0.4.1" # Bump before releasing!
   spec.authors       = ["Julien Ponge"]
   spec.email         = ["julien.ponge@gmail.com"]
 
@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
+  spec.add_runtime_dependency "asciidoctor", "1.5.8"
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 
   spec.add_development_dependency "bundler", "~> 1.16"
