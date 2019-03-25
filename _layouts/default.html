@@ -28,12 +28,20 @@
 </nav>
 
 <div class="container">
+
   <div class="row">
     <div class="col">
       <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
   </div>
+
+  <div class="row">
+    <div class="col">
+      {% include social.html %}
+    </div>
+  </div>
+
   <div class="row">
     <div class="col">
       <hr>
